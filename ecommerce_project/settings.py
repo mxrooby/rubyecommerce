@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Environment variables
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'fallback_dev_secret')
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1', 'rubyecommerce.onrender.com').split(',')
 
 OPENAI_KEY = os.getenv('OPENAI_KEY')
 MONGO_URI = os.getenv('MONGO_URI')
